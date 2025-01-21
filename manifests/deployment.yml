@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yojanperupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yojanperupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: yojanperupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: yojanperupipelinesjavascriptdocker 
+          image: mycontainerregistrylab16.azurecr.io/yojanperupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
